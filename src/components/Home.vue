@@ -1,10 +1,9 @@
 <template>
 <div id="app">
-  <!-- <iframe src="www.baidu.com" width="1201" height="300" frameborder="0" scrolling="auto"></iframe> -->
 
-  <el-container class="con_section">
+  <el-container class="con_section" style="width:100%">
     <el-header class="blueheader">
-      <h2 class="headlogo">毕业生就业数据分析</h2>
+      <h2 class="headlogo">基于JSP的C/C++竞赛系统</h2>
       <el-col :span="3" class="userinfo">
         <el-dropdown>
           <i class="el-icon-setting" style="margin-right: 15px"></i>
@@ -14,17 +13,21 @@
             <el-dropdown-item>删除</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
-        <span>安国维</span>
+        <span>刘伟娜</span>
       </el-col>
     </el-header>
     <el-container>
       <el-aside style="flex: 0 0 230px;width: 230px;background:#eef1f6">
         <el-menu default-active="1" class="el-menu-vertical-demo" @select="handleSelect">
           <el-submenu index="1">
-            <template slot="title"><i class="el-icon-message"></i>信息后台</template>
-            <el-menu-item index="1">高校列表</el-menu-item>
-            <el-menu-item index="2">公司列表</el-menu-item>
-            <el-menu-item index="3">学生列表</el-menu-item>
+            <template slot="title"><i class="el-icon-message"></i>主菜单</template>
+            <el-menu-item index="1">开始考试</el-menu-item>
+            <el-menu-item index="2">成绩信息</el-menu-item>
+            <el-menu-item index="3">学生管理</el-menu-item>
+            <el-menu-item index="4">教师管理</el-menu-item>
+            <el-menu-item index="5">题库管理</el-menu-item>
+            <el-menu-item index="6">考卷管理</el-menu-item>
+            <el-menu-item index="7">登录</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
@@ -63,13 +66,25 @@
       handleSelect(key, keyPath){    
         switch(key){
           case '1':
-            this.$router.push('/school');
+            this.$router.push('/questions/randomQuestionById');
             break;
           case '2':
-            this.$router.push('/company');
+            this.$router.push('/result');
             break;
           case '3':
-            this.$router.push('/student')
+            this.$router.push('/student');
+            break;
+          case '4':
+            this.$router.push('/teacher');
+            break;
+          case '5':
+            this.$router.push('/questions');
+            break;
+          case '6':
+            this.$router.push('/page');
+            break;
+          case '7':
+            this.$router.push('/login')
             break;
         }
       },
@@ -88,11 +103,11 @@
   .blueheader {
     height: 60px;
     line-height: 60px;
-    background: #67c23a;
+    background: #008080  ;
     color: #fff;
   }
   .el-menu-item.is-active {
-      color: #67c23a;
+      color: #008080  ;
   }
   .headlogo{
     float: left;
