@@ -5,7 +5,7 @@
           		教师账号： <el-input  placeholder="根据教师账号模糊查询" clearable style="width:200px"></el-input>
            		<el-button type="primary"  icon="el-icon-search">查询</el-button>
                <el-button type="success" icon="el-icon-circle-plus-outline" @click="openAddTeacherDialog = true">新增</el-button>
-               <!-- 新增教师信息窗口-->
+               <!-- 新增教师信息窗口 -->
                       <el-dialog title='新增教师信息' :visible.sync="openAddTeacherDialog">
                         <el-form :model="Teacher">
                           <el-form-item label="教师姓名">

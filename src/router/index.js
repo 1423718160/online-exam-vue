@@ -19,6 +19,12 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'enter',
+      component: Login
+    },
+
+    {
+      path: '/home',
       name: '竞赛系统',
       component: Home,
       meta: {
